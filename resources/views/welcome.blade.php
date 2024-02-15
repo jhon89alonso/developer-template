@@ -14,12 +14,12 @@
     <!-- Styles -->
 
     @vite('resources/css/app.css')
-    @vite('resources/js/app.js')
 </head>
 
 <body class="antialiased">
     <div id="app"></div>
-    <h1>tests</h1>
+
+    @vite('resources/js/app.js')
 </body>
 
 </html>
