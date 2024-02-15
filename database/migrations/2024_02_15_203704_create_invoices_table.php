@@ -23,7 +23,7 @@ return new class extends Migration
             $table->double('discount')->default(0);
             $table->double('total');
             $table->timestamps();
-            $table->softDelete();
+            $table->softDeletes();
         });
     }
 
