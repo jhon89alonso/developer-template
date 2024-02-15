@@ -13,7 +13,17 @@ return new class extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
+            $table->string('number')->unique();
+            $table->integer('customer_id')->unsigned();
+            $table->date('date');
+            $table->date('due_date');
+            $table->string('reference')->nullable();
+            $table->text('terms_and_conditions')->nullable();
+            $table->double('sub_total');
+            $table->double('discount')->default(0);
+            $table->double('total');
             $table->timestamps();
+            $table->softDelete();
         });
     }
 
